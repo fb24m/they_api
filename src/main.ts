@@ -8,7 +8,7 @@ async function bootstrap(): Promise<void> {
   app.useGlobalPipes(new ValidationPipe())
   app.use(cookieParser(process.env.COOKIE_SECRET))
   app.enableCors({
-    origin: 'http://localhost:4200',
+    origin: ['http://localhost:4200', 'https://they-kohl.vercel.app', 'https://y.fb24m.ru'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   })
