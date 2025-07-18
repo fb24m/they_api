@@ -70,7 +70,7 @@ export class AuthService {
   authorize(response: Response, userId: number) {
     response.cookie('usedId', this.jwtService.sign({ userId }), {
       httpOnly: true,
-      sameSite: 'lax',
+      sameSite: 'none',
       signed: true,
     })
   }
